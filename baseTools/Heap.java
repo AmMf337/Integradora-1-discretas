@@ -50,14 +50,7 @@ public class Heap<K,T extends Comparable<T>>{
         size++;
 
     }
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    public boolean isFull() {
-        return size == capacity;
-    }
-
+  
     public T remove() {
         if (isEmpty()) {
             throw new IllegalStateException("Heap is empty.");
@@ -76,17 +69,6 @@ public class Heap<K,T extends Comparable<T>>{
     
 
 
-    private int parent(int index) {
-        return (index - 1) / 2;
-    }
-
-    private int left(int index) {
-        return (index * 2) + 1;
-    }
-
-    private int right(int index) {
-        return (index * 2) + 2;
-    }
     
 
 } 
