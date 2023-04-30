@@ -1,21 +1,27 @@
 package model;
 
-public interface IPriorityQueue<K,V,P extends Comparable<P>> {
+public interface IPriorityQueue<V,P extends Comparable<P>> {
     
-    public void insert(NodeQueue<K,V,P> node);
+    public void insert(NodeQueue<V,P> node);
 
-    public NodeQueue<K,V,P> heapExtractMax() throws Exception;
+    public NodeQueue<V,P> heapExtractMax() throws Exception;
 
-    public NodeQueue<K,V,P> heapExtractMin() throws Exception;
+    public NodeQueue<V,P> heapExtractMin() throws Exception;
 
-    public NodeQueue<K,V,P> heapMaximum();
+    public NodeQueue<V,P> heapMaximum();
 
-    public NodeQueue<K,V,P> heapMinimum();
+    public NodeQueue<V,P> heapMinimum();
 
-    public void increaseKey(K key,K newKey);
+    public void increaseKey(int index,P newKey) throws Exception;
 
-    public void decreaseKey(K key,K newKey);
+    public void decreaseKey(int index,P newKey) throws Exception;
 
-    public void maxHeapInsert(K key);
+    public void maxHeapInsert(V value,P priority) throws Exception;
+
+    public void heapSortMinToMax();
+    
+    public void heapSortMaxToMin();
 }
+
+
 
