@@ -1,0 +1,63 @@
+6
+10
+60
+A1//Harry Potter//1//60//Tercera edad//3
+D1//Bella Swan//1//60//Embarazada//3
+B1//Hermione Granger//1//60//Morbilidad//3
+C1//Scarlett Johansson//1//72//Embarazada//3
+E1//Tony Stark//1//60//Operado//2
+F1//Gal Gadot//1//60//Morbilidad//3
+A2//Bruce Wayne//1//60//
+B2//Black Widow//1//59//
+C2//Peter Parker//1//58//
+D2//Margaery Tyrell//1//60//
+E2//Eren Yeager//1//56//
+F2//Sansa Stark//1//60//
+A3//Jon Snow//1//60//
+B3//Dana Scully//1//59//
+C3//Fox Mulder//1//58//
+D3//Gandalf//1//60//
+E3//Aragorn//1//56//
+F3//Guts//1//60//Morbilidad//3
+A4//Katniss Everdeen//0//60//
+B4//Peeta Mellark//0//59//
+C4//Hercules//0//58//
+D4//Samuel Alvarez//0//60//
+E4//Aurora//0//56//
+F4//Jasmine//0//60//
+A5//Mickey Mouse//0//60//
+B5//Daisy Duck//0//59//
+C5//Donald Duck//0//58//
+D5//Goofy//0//60//
+E5//Pluto//0//56//
+F5//Minnie Mouse//0//60//
+A6//Homer Simpson//0//60//
+B6//Marge Simpson//0//59//
+C6//Bart Simpson//0//58//
+D6//Lisa Simpson//0//60//
+E6//Maggie Simpson//0//56//
+F6//Ned Flanders//0//60//Mareos//3
+A7//SpongeBob SquarePants//0//60//
+B7//Patrick Star//0//59//
+C7//Squidward Tentacles//0//58//
+D7//Sandy Cheeks//0//60//
+E7//Mr. Krabs//0//56//
+F7//Gary the Snail//0//60//
+A8//Rick Sanchez//0//60//
+B8//Morty Smith//0//59//
+C8//Summer Smith//0//58//
+D8//Beth Smith//0//60//
+E8//Jerry Smith//0//56//
+F8//Birdperson//0//60//
+A9//Hannibal Lecter//0//60//
+B9//Will Graham//0//59//
+C9//Clarice Starling//0//58//
+D9//Al Pacino//0//60//
+E9//Robert De Niro//0//56//
+F9//Marlon Brando//0//60//
+A10//Frodo Baggins//0//60//
+B10//Samwise Gamgee//0//59//
+C10//Gollum//0//58//
+D10//Legolas//0//60//
+E10//Gimli//0//56//
+F10//Aragorn//0//60//
