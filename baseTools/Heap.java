@@ -1,14 +1,46 @@
-import java.util.ArrayList;
-
-public class Heap<K,T extends Comparable<T>>{
-    private ArrayList<T> heap;
+public class Heap<V,P extends Comparable<P>> implements IPriorityQueue<V,P>{
+    private NodeQueue<V,P> [] heap;
     private  int size;
     private int capacity;
-    public Heap(int capacity) {
-        this.heap = new ArrayList<T>(capacity);
-        this.size = 0;
-        this.capacity = capacity;
+    public Heap(NodeQueue<V,P>[] heap) {
+        this.heap = heap;
+        this.size = heap.length;
+        this.capacity = heap.length-1;
     }
+    public void maxHeapify(int index){
+        int largest = index;
+        int left = left(index);
+        int right = right(index);
+        if(left <= heap.length && heap[left(index)].compareTo(heap[index]) > 0){
+            largest =  left;
+        }
+        if(right <= heap.length && heap[right(index)].compareTo(heap[largest]) > 0){
+            largest =  right;
+        }
+        if(heap[largest] != heap[index]){
+            swap(index, largest);
+            maxHeapify(largest);
+        }
+    }
+    public void minHeapify(int index){
+        int smallest = index;
+        int left = left(index);
+        int right = right(index);
+        if(left <= heap.length && heap[left(index)].compareTo(heap[index]) < 0){
+            smallest =  left;
+        }
+        if(right <= heap.length && heap[right(index)].compareTo(heap[smallest]) < 0){
+            smallest =  right;
+        }
+        if(heap[smallest] != heap[index]){
+            swap(index, smallest);
+            minHeapify(smallest);
+        }
+    }
+    private int parent(int index) {
+        return (index - 1) / 2;
+    }
+
     private int left(int index) {
         return (index * 2) + 1;
     }
@@ -16,59 +48,10 @@ public class Heap<K,T extends Comparable<T>>{
     private int right(int index) {
         return (index * 2) + 2;
     }
-    public maxHeaify(){
+    public void maxHeapify(){
         maxHeapify(1);
     }
-    public void maxHeapify(int index){
-        int left = left(index);
-        int right = right(index);
-        if(left <= heap.size() && heap.get(left(index)).compareTo(heap.get(index)) > 0){
-            int larguest =  left;
-        }else{
-            int larguest =  right;
-        }
-        if(right <= heap.size() && heap.get(right(index)).compareTo(heap.get(largest)) > 0){
-            int larguest =  right;
-        }
-        if(heap.get(largest) != heap.get(index)){
-            swap(heap.get(index), heap.get(largest));
-            maxHeapify(largest);
-        }
+    public void minHeapify(){
+        minHeapify(1);
     }
-    
-    public insert(T node){
-        if(isFull()){
-            throw new IllegalStateException("Heap is full");
-        }
-        size++;
-
-    }
-    public insert(T node){
-        if(isFull()){
-            throw new IllegalStateException("Heap is full");
-        }
-        size++;
-
-    }
-  
-    public T remove() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Heap is empty.");
-        }
-        int removedValue = heap.get(0);
-        heap.set(1,heap.get(size));
-        size--;
-        bubbleDown();
-        return removedValue;
-    }
-    private void swap(int index1, int index2) {
-        T temp = heap.get(index1);
-        heap.set(index1,heap.get(index2));
-        heap.set(index2, temp);
-    }
-    
-
-
-    
-
-} 
+}
