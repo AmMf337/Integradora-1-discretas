@@ -1,6 +1,7 @@
-package testCases;
 
-import baseTools.*;
+import model.*;
+import model.Node;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 

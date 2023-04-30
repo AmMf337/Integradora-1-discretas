@@ -1,4 +1,4 @@
-package baseTools;
+package model;
 
 public class Stack<K, V> {
     private Node<K, V>[] stack;

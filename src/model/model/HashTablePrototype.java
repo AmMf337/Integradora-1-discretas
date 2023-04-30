@@ -1,4 +1,4 @@
-
+package model;
 public class HashTablePrototype<K, V> {
     private static final int SIZE_TABLE = 10;
     private Node<K, V>[] table;

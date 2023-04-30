@@ -1,3 +1,4 @@
+package model;
 public class Heap<V,P extends Comparable<P>> implements IPriorityQueue<V,P>{
     private NodeQueue<V,P> [] heap;
     private  int size;
