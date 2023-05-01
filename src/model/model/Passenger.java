@@ -7,11 +7,7 @@ public class Passenger {
     public int timeOfarrive;
     public int totalMiles;
     public String characteristics;
-    //format in dataBase: ticket//name//isFirstClass//totalMiles
-    //priority(calculate with the others atributes)
-    //isFirstClass(1=true,0=false,if true priority+numberOfpassengers+20)
-    //timeOfArrive(its values stars in the total quantity of passengers then reduces one for each passeneger//)
-    //
+   
     public Passenger(String ticket,String name, int priority, int isFirstClass, int timeOfarrive,int totalMiles,String characteristics) {
         this.ticket = ticket;
         this.priority = priority;
