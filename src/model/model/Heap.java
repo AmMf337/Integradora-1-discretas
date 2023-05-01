@@ -4,13 +4,21 @@ public class Heap<V, P extends Comparable<P>> implements IPriorityQueue<V, P> {
     private NodeQueue<V, P>[] heap;
     private int size;
     private int capacity;
-
+    
+    /**
+     * Constructor for the Heap class.
+     * @param heap An array of type NodeQueue<V, P> representing the heap.
+     */
     public Heap(NodeQueue<V, P>[] heap) {
         this.heap = heap;
         this.size = heap.length;
         this.capacity = heap.length - 1;
     }
-
+    
+    /**
+     * Recursive method to maintain the max heap property of a node at a given index.
+     * @param index An integer representing the index of the node to be maintained.
+     */
     public void maxHeapify(int index) {
         int largest = index;
         int left = left(index);
@@ -26,7 +34,11 @@ public class Heap<V, P extends Comparable<P>> implements IPriorityQueue<V, P> {
             maxHeapify(largest);
         }
     }
-
+    
+    /**
+     * Recursive method to maintain the min heap property of a node at a given index.
+     * @param index An integer representing the index of the node to be maintained.
+     */
     public void minHeapify(int index) {
         int smallest = index;
         int left = left(index);
@@ -43,25 +55,47 @@ public class Heap<V, P extends Comparable<P>> implements IPriorityQueue<V, P> {
         }
     }
 
+    /**
+     * Method to calculate the parent index of a given node.
+     * @param index An integer representing the index of the node whose parent is to be found.
+     * @return An integer representing the index of the parent of the given node.
+     */
     private int parent(int index) {
         return (index - 1) / 2;
     }
 
+    /**
+     * Method to calculate the left child index of a given node.
+     * @param index An integer representing the index of the node whose left child is to be found.
+     * @return An integer representing the index of the left child of the given node.
+     */
     private int left(int index) {
         return (index * 2) + 1;
     }
 
+    /**
+     * Method to calculate the right child index of a given node.
+     * @param index An integer representing the index of the node whose right child is to be found.
+     * @return An integer representing the index of the right child of the given node.
+     */
     private int right(int index) {
         return (index * 2) + 2;
     }
 
+    /**
+     * Method to maintain the max heap property of the entire heap.
+     */
     public void maxHeapify() {
         maxHeapify(1);
     }
 
+    /**
+     * Method to maintain the min heap property of the entire heap.
+     */
     public void minHeapify() {
         minHeapify(1);
     }
+
 
     public boolean isEmpty() {
         return size == 0;
@@ -71,7 +105,12 @@ public class Heap<V, P extends Comparable<P>> implements IPriorityQueue<V, P> {
         return size == heap.length;
 
     }
-
+    /**heapSortMinToMax
+     * organize the nodes from min to max
+     * @param void -
+     * @return void
+     * 
+     */
     @Override
     public void heapSortMinToMax() {
         for (int i = size - 1; i >= 1; i--) {
@@ -81,7 +120,12 @@ public class Heap<V, P extends Comparable<P>> implements IPriorityQueue<V, P> {
         }
     }
 
-    // Revisar documentación en la interfaz
+    /**heapSortMinToMax
+     * organize the nodes from max to min
+     * @param void -
+     * @return void
+     * 
+     */
     @Override
     public void heapSortMaxToMin() {
         for (int i = size - 1; i >= 1; i--) {
